@@ -1,5 +1,7 @@
 # bazel_py_example
 
+I ran these tests on an M1 Macbook Pro.
+
 ## Setup
 
 ```
