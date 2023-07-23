@@ -1,0 +1,27 @@
+load("@aspect_rules_py//py:defs.bzl", "py_library", "py_test")
+load("@pip//:requirements.bzl", "requirement")
+
+py_library(
+    name = "main",
+    srcs = ["main.py"],
+    imports = ["."],
+)
+
+py_binary(
+    name = "main_bin",
+    srcs = ["main.py"],
+    main = "main.py",
+)
+
+py_test(
+    name = "main_test",
+    srcs = ["main_test.py"],
+    args = [
+        "--junit-xml=$$XML_OUTPUT_FILE",
+        "--ignore=external",
+    ],
+    deps = [
+        ":main",
+        requirement("pytest"),
+    ],
+)
