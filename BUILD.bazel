@@ -1,0 +1,27 @@
+load("@rules_python//python:defs.bzl", "py_library", "py_test")
+load("@pip//:requirements.bzl", "requirement")
+load("@rules_python//python:pip.bzl", "compile_pip_requirements")
+
+py_library(
+    name = "main",
+    srcs = ["main.py"],
+)
+
+py_test(
+    name = "main_test",
+    srcs = ["main_test.py"],
+    args = [
+        "--junit-xml=$$XML_OUTPUT_FILE",
+        "--ignore=external",
+    ],
+    deps = [
+        ":main",
+        requirement("pytest"),
+    ],
+)
+
+compile_pip_requirements(
+    name = "requirements",
+    requirements_in = "//:requirements.txt",
+    requirements_txt = "//:requirements_lock.txt",
+)
