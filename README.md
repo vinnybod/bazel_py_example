@@ -23,6 +23,7 @@ In PyCharm:
 * Debug the `rules_py/main_test` target
 * Observe that the PyCharm debugger fails in PyCharm internal code.
 `/Applications/PyCharm.app/Contents/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py`
+* Swapping the `pytest.main()` call to `add_test()` does not fix the issue
 
 ```
 Traceback (most recent call last):
