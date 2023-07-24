@@ -46,7 +46,6 @@ boilerplate that is required to run `pytest` from a Bazel test seen in the other
 In PyCharm:
 * Run the `rules_py/main_test` target
 * Debug the `rules_py/main_test` target
-# TODO Where is it failing if it doesn't have the boilerplate
 * Observe that the PyCharm debugger fails in PyCharm internal code.
 `/Applications/PyCharm.app/Contents/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py`
 
