@@ -1,6 +1,11 @@
 # bazel_py_example
 
-I ran these tests on an M1 Macbook Pro.
+Specs:
+```
+M1 Macbook Pro
+PyCharm Professional PyCharm 2023.1.4
+Bazel Plugin (2023.07.04.0.1-api-version-231)
+```
 
 ## Setup
 
